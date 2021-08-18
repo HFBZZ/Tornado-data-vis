@@ -79,7 +79,7 @@ d3.csv("nyc.csv", function(error, data) {
 	  .data(months)
    .enter().append("g")
 	  .attr("class","monthTick")
-	  .attr("transform", function(d, i) { return "rotate(" -2 + (i * 360 / months.length) + ")"; });
+	  .attr("transform", function(d, i) { return "rotate("  + (i * 360 / months.length) + ")"; });
  
   monthTicks.selectAll(".monthTick")
     .append("line")
@@ -97,8 +97,8 @@ d3.csv("nyc.csv", function(error, data) {
     .style("text-anchor", "begin")
     .text(function(d) { return d; });
 
-  var tickCircles = svg.append("g")
-    .attr("class","ticksCircle");
+  //var tickCircles = svg.append("g")
+    //.attr("class","ticksCircle");
   	
   /*
   tickCircles.selectAll("circle")
