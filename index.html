@@ -50,12 +50,12 @@ var svg = d3.select('body').append("svg")
 
 d3.csv("nyc.csv", function(error, data) {
 
- // data.forEach(function(d) {
-    //d["date"] = formatDate.parse(d["date"]);
-    //d["Min TemperatureC"] = +d["Min TemperatureC"];
-	  //d["Max TemperatureC"] = +d["Max TemperatureC"];
-	  //d["Mean TemperatureC"] = +d["Mean TemperatureC"];
-	  //d["Precipitationmm"] = (d["Precipitationmm"] === "T") ? 0 : +d["Precipitationmm"];
+ data.forEach(function(d) {
+    d["date"] = formatDate.parse(d["date"]);
+    d["Min TemperatureC"] = +d["Min TemperatureC"];
+	  d["Max TemperatureC"] = +d["Max TemperatureC"];
+	  d["Mean TemperatureC"] = +d["Mean TemperatureC"];
+	  d["Precipitationmm"] = (d["Precipitationmm"] === "T") ? 0 : +d["Precipitationmm"];
   });
 
   var arc = d3.svg.arc()
