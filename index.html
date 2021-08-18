@@ -124,13 +124,13 @@ d3.csv("weeks.csv", function(error, data) {
     .attr("d", arc);
     */
     
-  var precipitations = svg.selectAll(".precipitation")
+  var Tornado = svg.selectAll(".Tornado")
     .data(data)
    .enter().append("g")
-    .attr("class","precipitation")
+    .attr("class","Tornado")
 	  .attr("transform", function(d, i) { return "rotate(" + (i * 360 / data.length) + ")"; });
 
-  precipitations.append("circle")
+  Tornado.append("circle")
     .attr("cx",0)
     .attr("cy",function(d) { return /*-x(d["Mean TemperatureC"])*/; })
     //.attr("cy",0)
