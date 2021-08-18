@@ -60,11 +60,13 @@ d3.csv("nyc.csv", function(error, data) {
 	  d["Precipitationmm"] = (d["Precipitationmm"] === "T") ? 0 : +d["Precipitationmm"];
   });
 
+  /*
   var arc = d3.svg.arc()
     .startAngle(function(d) { return 0; })
 	  .endAngle(function(d) { return ((2 * Math.PI) / (data.length)); })
 	  .innerRadius(function(d) { return x(d["Min TemperatureC"]); })
 	  .outerRadius(function(d) { return x(d["Max TemperatureC"]); });
+    */
 
   var months = d3.map(data, function(d) {
     return monthNameFormat(d["date"]);
