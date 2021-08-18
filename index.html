@@ -53,7 +53,7 @@ var svg = d3.select('body').append("svg")
 d3.csv("weeks.csv", function(error, data) {
 
   data.forEach(function(d) {
-    //d["date"] = formatDate.parse(d["date"]);
+    d["date"] = formatDate.parse(d["date"]);
     d["Week Number"] = +d["Week Number"];
 	  d["Radius / %"] = +d["Radius / %"];
 	  //d["Mean TemperatureC"] = +d["Mean TemperatureC"];
