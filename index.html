@@ -110,11 +110,13 @@ d3.csv("weeks.csv", function(error, data) {
     .style("stroke-width", function(d,i) { return ((i & 1) === 0) ? 1 : 0.25; });
     */
 
+  /*
   var temperatures = svg.selectAll(".temperature")
     .data(data)
    .enter().append("g")
     .attr("class","temperature")
     .attr("transform", function(d, i) { return "rotate(" + (i * 360 / data.length) + ")"; });
+    */
 
   /*
   temperatures.append("path")
