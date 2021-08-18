@@ -101,7 +101,7 @@ d3.csv("nyc.csv", function(error, data) {
     .attr("class","ticksCircle");
   	
   tickCircles.selectAll("circle")
-    .data(ticks)
+    //.data(ticks)
    .enter().append("circle")
 	  .attr("r", function(d) {return x(d);})
     .style("fill", "none")
