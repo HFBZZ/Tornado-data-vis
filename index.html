@@ -30,9 +30,9 @@ var x = d3.scale.linear()
  .range([120, maxRadius]);
 
 
-var xAxis = d3.svg.axis()
-  .scale(x).orient("left")
-  .tickValues()
+//var xAxis = d3.svg.axis()
+  //.scale(x).orient("left")
+  //.tickValues()
   //.tickFormat(function(d) { return d + "°C"; });
   
 
@@ -151,8 +151,8 @@ d3.csv("nyc.csv", function(error, data) {
 
   svg.append("g")
     .attr("class", "x axis")
-    .call(xAxis)
-   .selectAll("text")
+    //.call(xAxis)
+    .selectAll("text")
     .style("fill","#454545")
     .style("text-anchor","middle");
 
