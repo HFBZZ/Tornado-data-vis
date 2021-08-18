@@ -114,11 +114,13 @@ d3.csv("nyc.csv", function(error, data) {
     .attr("class","temperature")
     .attr("transform", function(d, i) { return "rotate(" + (i * 360 / data.length) + ")"; });
 
+  /*
   temperatures.append("path")
     .style("stroke", "white")
     .style("stroke-width",1.2)
     .style("fill", function(d) { return color(d["Mean TemperatureC"]); })
     .attr("d", arc);
+    */
     
   var precipitations = svg.selectAll(".precipitation")
     .data(data)
