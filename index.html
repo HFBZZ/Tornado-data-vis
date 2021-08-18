@@ -86,12 +86,12 @@ d3.csv("nyc.csv", function(error, data) {
     .attr("y1", -maxRadius - 5)
     .attr("y2", -maxRadius - 30)
     .style("stroke", "#d6d6d6")
-    .style("stroke-width",2);
+    .style("stroke-width",3);
 
   monthTicks.selectAll(".monthTick").append("text")
     .attr("x", 8)
     .attr("y", -maxRadius - 15)
-    .style("font-size",15)
+    .style("font-size",18)
     .style("fill","#d6d6d6")
     .style("font-family","monospace")
     .style("text-anchor", "begin")
